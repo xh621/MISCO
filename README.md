@@ -41,6 +41,14 @@ This project includes 8 benchmark tasks:
 - Thrower-v0: Throwing task
 - Catcher-v0: Catching task
 
+Here we provide a simple introduction to the task settings accompanied by illustrative images of each task. For readers seeking a deeper understanding of the physical setup and configurations, we recommend referring to Evolution Gym simulation environment.
+
+<p align="center">
+  <img src="pic/8-task setting.png" width="800">
+  <br>
+  <em>Illustration of various tasks in the EvoGym environment.</em>
+</p>
+
 ## 🔬 Evaluation Metrics
 
 ### Optimization Efficiency
