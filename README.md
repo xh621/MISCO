@@ -1,9 +1,9 @@
-# MISCO (<u>M</u>ulti-task soft robot design automation with <u>I</u>nter-voxel <u>S</u>oft robot design automation with <u>CO</u>ordination)
+# MISCO (**<u>M</u>**ulti-task soft robot design automation with **<u>I</u>**nter-voxel **<u>S</u>**oft robot design automation with **<u>CO</u>**ordination)
 
 <p align="center">
   <img src="pic/1-Algorithm_1.png" width="800">
   <br>
-  <em>Figure 1: Algorithm Overview. a, In each generation, MISCO iterates over four stages: (1) Robot proposal by MEC-VAE to generate candidate solutions; (2) Control optimization and fitness evaluation; (3) Natural selection with an adjustable balance between advantage exploitation and biodiversity exploration; (4) Model update based on the selected robot designs to better fit the high-performing morphology distribution. b, The process of robot proposal by MEC-VAE. c, The detail of model update.</em>
+  <em>Figure 1: Algorithm Overview. a, In each generation, MISCO iterates over four stages: (1) Robot proposal by MEC-VAE to generate candidate solutions; (2) Control optimization and fitness evaluation; (3) Natural selection with an adjustable balance between advantage exploitation and biodiversity exploration; (4) Model update based on the selected robot designs to better fit the high-performing morphology distribution. The algorithm then returns to the first stage, and generates a new, hopefully better, population from the shifted distribution. b, The process of robot proposal by MEC-VAE. c, The detail of model update. Given a specific robot morphology and its task type, the approximate posterior (i.e. encoder) infers the latent variable H_t, which is then used to reconstruct a morphological distribution. The evidence lower bound (ELBO) consists of two terms, the reconstruction error and the KL divergence regularizing the approximate posterior towards the prior distribution.</em>
 </p>
 
 ## 📖 Project Overview
@@ -59,33 +59,33 @@ where MV is morphological variance, MHD is morphological Hamming distance, α an
 <p align="center">
   <img src="pic/2-result1_8task_1.png" width="700">
   <br>
-  <em>Figure 2: Evaluations of best fitness and cumulative fitness time average (CFTA) during evolution.</em>
+  <em>Figure 2: Evaluations of best fitness and cumulative fitness time average (CFTA) during evolution. a, A brief introduction of the selected task instances, including their objectives and difficulty levels. b, Performance comparison of best fitness. Best fitness (vertical axis) is plotted against the cumulative count of up to 1,000 robot evaluations (horizontal axis). c, Performance comparison of cumulative fitness time average (CFTA). CFTA reflects how the average fitness of evaluated robot designs changes as evolution progresses.</em>
 </p>
 
 <p align="center">
   <img src="pic/3-result2_8task_1.png" width="700">
   <br>
-  <em>Figure 3: Comparisons of evolutionary outcomes across different metrics and tasks.</em>
+  <em>Figure 3: Comparisons of evolutionary outcomes. a, left: Comparative results of eventually achieved best fitness (i.e. best fitness at 1000 evaluations), as well as average ranks of different algorithms across all tasks. The best results are in bold while the best-performing baselines other than MISCo are underlined (the same is true for panel b). a, right: Normalized best-fitness performances showcased in radar plots, with MISCo-A serving as one unit. b, left: Comparative results of average fitness of all evaluated designs, as well as average ranks of different algorithms across all tasks. b, right: Normalized average-fitness performances showcased in radar plots, with MISCo-A serving as one unit. c, Kernel density estimations of fitness distributions. Probability density (vertical axis) is plotted against fitness (horizontal axis).</em>
 </p>
 
 ### Diversity Analysis
 <p align="center">
   <img src="pic/4-bio_8task_1.png" width="600">
   <br>
-  <em>Figure 4: Performance comparison of diversity across different algorithms and tasks.</em>
+  <em>Figure 4: Performance comparison of diversity. In some cases such as GA in Climber-v0, the algorithm fails to produce more than one robot design that could enter top 5 percent and so diversity is not available ("NA"). Revisit the results in Section efficiency, and we note that only MEC-VAE and MorphVAE are able to achieve diversity steadily on most tasks without compromising the ability to evolve high-performing robots. This confirms the superiority of probabilistic generative models, such as VAE, to infer statistical distributions of high-performing solutions from evaluated sample points, hence effectively stimulating the exploration of diverse promising designs in the evolutionary process and achieving a delicate balance between exploration and exploitation.</em>
 </p>
 
 ### Ablation Studies
 <p align="center">
   <img src="pic/7-ablation_1.png" width="600">
   <br>
-  <em>Figure 5: Results of the ablation study comparing base models with their variants.</em>
+  <em>Figure 5: Results of the ablation study. Best fitness achieved at the end of evolution is compared between both of the two variants and their ablated versions.</em>
 </p>
 
 <p align="center">
   <img src="pic/5-ablation_excel_1.png" width="600">
   <br>
-  <em>Figure 6: Comparison of best fitness between MISCO and its ablated versions.</em>
+  <em>Figure 6: Comparison of best fitness between MISCO and its ablated versions. a, Ablation studies on MISCO-A. b, Ablation studies on MISCO-B.</em>
 </p>
 
 Experiments across 8 benchmark tasks demonstrate that:
