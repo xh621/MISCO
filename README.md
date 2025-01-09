@@ -44,7 +44,7 @@ This project includes 8 benchmark tasks:
 Here we provide a simple introduction to the task settings accompanied by illustrative images of each task. For readers seeking a deeper understanding of the physical setup and configurations, we recommend referring to Evolution Gym simulation environment.
 
 <p align="center">
-  <img src="pic/8-task setting.png" width="800">
+  <img src="pic/8-task setting.png" width="700">
   <br>
   <em>Illustration of various tasks in the EvoGym environment.</em>
 </p>
@@ -105,7 +105,8 @@ Experiments across 8 benchmark tasks demonstrate that:
 ## 🚀 Usage Guide
 
 ### Environment Setup
-1. Install EvoGym simulation environment:
+**Install EvoGym simulation environment**:
+
 Please properly install the simulation environment EvoGym by following the instructions at https://evolutiongym.github.io/, and then place the folders in this repository under "/examples".
 
 ### Project Structure
