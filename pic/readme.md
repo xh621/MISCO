@@ -1,6 +1,6 @@
 # Multi-task Knowledge Sharing Analysis
 
-This visualization demonstrates the empirical evidence of structural similarities shared across different robot design tasks in the MISCO framework.
+As a supplementary material, this visualization demonstrates the empirical evidence of structural similarities shared across different robot design tasks in the MISCO framework.
 
 ## Overview
 The figure consists of three key components analyzing the shared structures and knowledge transfer across multiple robotic tasks:
