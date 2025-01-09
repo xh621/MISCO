@@ -1,26 +1,12 @@
-# MISCO
-
-Please properly install the simulation environment EvoGym by following the instructions at https://evolutiongym.github.io/, and then place the folders in this repository under "/examples".  
-
-Our main algorithm program is in "MISCO_A.py" and "MISCO_B.py".
-
-The architecture definition file of probabilistic generation model MEC-VAE is under folder path 'codes_of_model_architecture/'. 
-
-When running the algorithm code file, you need to download and place the corresponding model framework definition file in the same path as the algorithm code.
-
-The 'py' file with the 'Abalation' prefix is the algorithm code for the ablation experiments.
-
-Please feel free to contact us if you run into any problem. 
-
-## Multi-task Knowledge Sharing Analysis
+# Multi-task Knowledge Sharing Analysis
 
 This visualization demonstrates the empirical evidence of structural similarities shared across different robot design tasks in the MISCO framework.
 
-### Overview
+## Overview
 The figure consists of three key components analyzing the shared structures and knowledge transfer across multiple robotic tasks:
 
 <p align="center">
-  <img src="6-multi-task_intuitive.png" width="700">
+  <img src="6-multi-task intuitive.png" width="700">
   <br>
   <em>Figure: Shared structures across tasks. a, Overlapping of robot designs in multiple tasks visualized using t-SNE, where the red boxes highlight shared morphological features across different tasks. b, Perplexity matrix showing the similarity between different tasks, where values close to 1 (yellow) indicate high similarity. Note that 'DownStepper-v0' is shortened as 'DS-v0' and 'PlatformJumper-v0' as 'PJ-v0'. c, Dimension-wise average KL divergence of task latent variables, where bubble size and color intensity correspond to divergence magnitude across 128 dimensions, revealing the balance between shared and task-specific information in the latent space.</em>
 </p>
