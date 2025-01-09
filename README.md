@@ -1,7 +1,7 @@
 # MISCO (<u>M</u>ulti-task soft robot design automation with <u><strong>I</strong></u>nter-voxel <u>S</u>oft robot design automation with <u>CO</u>ordination)
 
 <p align="center">
-  <img src="pic/1-Algorithm_1.png" width="800">
+  <img src="pic/1-Algorithm_1.png" width="760">
   <br>
   <em>Figure 1: Algorithm Overview. a, In each generation, MISCO iterates over four stages: (1) Robot proposal by MEC-VAE to generate candidate solutions; (2) Control optimization and fitness evaluation; (3) Natural selection with an adjustable balance between advantage exploitation and biodiversity exploration; (4) Model update based on the selected robot designs to better fit the high-performing morphology distribution. The algorithm then returns to the first stage, and generates a new, hopefully better, population from the shifted distribution. b, The process of robot proposal by MEC-VAE. c, The detail of model update. Given a specific robot morphology and its task type, the approximate posterior (i.e. encoder) infers the latent variable H_t, which is then used to reconstruct a morphological distribution. The evidence lower bound (ELBO) consists of two terms, the reconstruction error and the KL divergence regularizing the approximate posterior towards the prior distribution.</em>
 </p>
@@ -88,6 +88,7 @@ where MV is morphological variance, MHD is morphological Hamming distance, α an
   <em>Figure 6: Comparison of best fitness between MISCO and its ablated versions. a, Ablation studies on MISCO-A. b, Ablation studies on MISCO-B.</em>
 </p>
 
+### Conclusions
 Experiments across 8 benchmark tasks demonstrate that:
 - MISCO-A achieves the best performance in 5 tasks with highest maximum fitness, while maintaining strong and competitive optimization efficiency across all 8 tasks
 - MISCO-B provides higher morphological diversity while maintaining competitive performance
@@ -101,13 +102,15 @@ Please properly install the simulation environment EvoGym by following the instr
 
 ### Project Structure
 
-`MISCO/
+```text
+MISCO/
 ├── MISCO_A.py # Main algorithm implementation (exploitation-focused)
 ├── MISCO_B.py # Main algorithm implementation (exploration-focused)
 ├── codes_of_model_architecture/
 │ └── CVAE.py # MEC-VAE model architecture
 │ └── CVAE_xx.py # MEC-VAE model architectures for ablation studies
-└── Ablation_.py # Ablation experiment code (entry-point)`
+└── Ablation_.py # Ablation experiment code (entry-point)
+```
 
 
 ### Key configurable parameters:
@@ -124,8 +127,8 @@ Please properly install the simulation environment EvoGym by following the instr
    - Place model architecture files in correct locations
    - Check all dependencies are installed
 2. Launch MISCO algorithm through MISCO_A.py or MISCO_B.py, and ablation experiments through Ablation_.py
-    `python MISCO_A.py # run MISCO-A algorithm`
-    `python Ablation_MISCO_A_with_Attention.py # run ablation version with attention mechanism`
+    - `python MISCO_A.py # run MISCO-A algorithm`
+    - `python Ablation_MISCO_A_with_Attention.py # run ablation version with attention mechanism`
 
 ## 🤝 Contributing
 
