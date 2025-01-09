@@ -1,4 +1,4 @@
-# MISCO (**<u>M</u>**ulti-task soft robot design automation with **<u>I</u>**nter-voxel **<u>S</u>**oft robot design automation with **<u>CO</u>**ordination)
+# MISCO (<u>M</u>ulti-task soft robot design automation with <u><strong>I</strong></u>nter-voxel <u>S</u>oft robot design automation with <u>CO</u>ordination)
 
 <p align="center">
   <img src="pic/1-Algorithm_1.png" width="800">
@@ -101,13 +101,13 @@ Please properly install the simulation environment EvoGym by following the instr
 
 ### Project Structure
 
-MISCO/
+`MISCO/
 ├── MISCO_A.py # Main algorithm implementation (exploitation-focused)
 ├── MISCO_B.py # Main algorithm implementation (exploration-focused)
 ├── codes_of_model_architecture/
 │ └── CVAE.py # MEC-VAE model architecture
 │ └── CVAE_xx.py # MEC-VAE model architectures for ablation studies
-└── Ablation_.py # Ablation experiment code (entry-point)
+└── Ablation_.py # Ablation experiment code (entry-point)`
 
 
 ### Key configurable parameters:
@@ -124,8 +124,8 @@ MISCO/
    - Place model architecture files in correct locations
    - Check all dependencies are installed
 2. Launch MISCO algorithm through MISCO_A.py or MISCO_B.py, and ablation experiments through Ablation_.py
-    python MISCO_A.py # run MISCO-A algorithm
-    python Ablation_MISCO_A_with_Attention.py # run ablation version with attention mechanism
+    `python MISCO_A.py # run MISCO-A algorithm`
+    `python Ablation_MISCO_A_with_Attention.py # run ablation version with attention mechanism`
 
 ## 🤝 Contributing
 
