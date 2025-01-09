@@ -1,7 +1,7 @@
 # MISCO (<u>M</u>ulti-task soft robot design automation with <u><strong>I</strong></u>nter-voxel <u>S</u>oft robot design automation with <u>CO</u>ordination)
 
 <p align="center">
-  <img src="pic/1-Algorithm_1.png" width="760">
+  <img src="pic/1-Algorithm_1.png" width="700">
   <br>
   <em>Figure 1: Algorithm Overview. a, In each generation, MISCO iterates over four stages: (1) Robot proposal by MEC-VAE to generate candidate solutions; (2) Control optimization and fitness evaluation; (3) Natural selection with an adjustable balance between advantage exploitation and biodiversity exploration; (4) Model update based on the selected robot designs to better fit the high-performing morphology distribution. The algorithm then returns to the first stage, and generates a new, hopefully better, population from the shifted distribution. b, The process of robot proposal by MEC-VAE. c, The detail of model update. Given a specific robot morphology and its task type, the approximate posterior (i.e. encoder) infers the latent variable H_t, which is then used to reconstruct a morphological distribution. The evidence lower bound (ELBO) consists of two terms, the reconstruction error and the KL divergence regularizing the approximate posterior towards the prior distribution.</em>
 </p>
@@ -57,13 +57,13 @@ where MV is morphological variance, MHD is morphological Hamming distance, α an
 
 ### Performance Evaluation
 <p align="center">
-  <img src="pic/2-result1_8task_1.png" width="700">
+  <img src="pic/2-result1_8task_1.png" width="600">
   <br>
   <em>Figure 2: Evaluations of best fitness and cumulative fitness time average (CFTA) during evolution. a, A brief introduction of the selected task instances, including their objectives and difficulty levels. b, Performance comparison of best fitness. Best fitness (vertical axis) is plotted against the cumulative count of up to 1,000 robot evaluations (horizontal axis). c, Performance comparison of cumulative fitness time average (CFTA). CFTA reflects how the average fitness of evaluated robot designs changes as evolution progresses.</em>
 </p>
 
 <p align="center">
-  <img src="pic/3-result2_8task_1.png" width="700">
+  <img src="pic/3-result2_8task_1.png" width="600">
   <br>
   <em>Figure 3: Comparisons of evolutionary outcomes. a, left: Comparative results of eventually achieved best fitness (i.e. best fitness at 1000 evaluations), as well as average ranks of different algorithms across all tasks. The best results are in bold while the best-performing baselines other than MISCo are underlined (the same is true for panel b). a, right: Normalized best-fitness performances showcased in radar plots, with MISCo-A serving as one unit. b, left: Comparative results of average fitness of all evaluated designs, as well as average ranks of different algorithms across all tasks. b, right: Normalized average-fitness performances showcased in radar plots, with MISCo-A serving as one unit. c, Kernel density estimations of fitness distributions. Probability density (vertical axis) is plotted against fitness (horizontal axis).</em>
 </p>
