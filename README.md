@@ -8,7 +8,7 @@
 
 ## 📖 Project Overview
 
-Motivated by the aforementioned limitations, here we propose MISCO, a novel evolutionary framework that leverages the multi-task optimization capabilities enabled by deep GM-based EDAs for robot design automation. Specifically, we integrate the **Morphological Evolutionary Conditional Variational Autoencoder** (MEC-VAE), a probabilistic generative model designed specifically for modeling voxel-based soft robots, into a bi-level optimization algorithm.
+Motivated by the aforementioned limitations, here we propose MISCO, **a novel evolutionary framework that leverages the multi-task optimization capabilities enabled by deep GM-based EDAs for robot design automation**. Specifically, we integrate the **Morphological Evolutionary Conditional Variational Autoencoder** (MEC-VAE), a probabilistic generative model designed specifically for modeling voxel-based soft robots, into a bi-level optimization algorithm.
 
 ### Key Features
 - 🤖 Automated design of voxel-based soft robots
@@ -49,8 +49,8 @@ This project includes 8 benchmark tasks:
 - **Cumulative Fitness Time Average (CFTA)**: Reflects the algorithm's ability to explore and maintain high-performance morphology designs
 
 ### Morphological Diversity
-Evaluated using Morphological Diversity Score (MDS):
-MDS = α MV + β MHD
+Evaluated using **Morphological Diversity Score (MDS)**:
+- MDS = α MV + β MHD, 
 where MV is morphological variance, MHD is morphological Hamming distance, α and β are weight coefficients, typically set to 0.5.
 
 ## 📊 Experimental Results
